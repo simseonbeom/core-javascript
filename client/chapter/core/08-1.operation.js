@@ -78,7 +78,7 @@ const first = [1,2,3];
 const second = [4,5,6];
 
 
-// spread syntax   전개 구문
+// spread syntax 전개 구문
 
 console.log(  [...first, ...second,7,8,9]  );
 
@@ -114,6 +114,8 @@ console.log(counter++);
 
 
 
+// fira code 
+ 
 
 console.clear()
 
@@ -123,6 +125,7 @@ console.clear()
 
 let count = 10;
 // let total = (count % 4) * (count /= 2) + count ** 3; // ?
+
 
 let total = count % 4;
 
