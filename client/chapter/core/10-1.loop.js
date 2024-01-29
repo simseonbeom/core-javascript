@@ -93,6 +93,9 @@ console.timeEnd('s')
 
 
 
+
+
+
 // while 문 (역순환 : 역방향)
 
 console.time('b')
