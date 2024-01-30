@@ -153,28 +153,57 @@ Object.prototype.nickName = 'tiger'
 
 // 재귀 함수 
 
-// for(let key in randomUser){
-//   if(Object.prototype.hasOwnProperty.call(randomUser,key)){
-//     const L1 = randomUser[key];
-//     console.log('\tL1 : ', L1);
-//     if(typeof L1 === 'object'){
-//       for(let key in L1){
-//         if(Object.prototype.hasOwnProperty.call(L1,key)){
-//           const L2 = L1[key];
-//           console.log('\t\tL2 : ', L2);
-//           if(typeof L2 === 'object'){
-//             for(let key in L2){
-//               if(Object.prototype.hasOwnProperty.call(L2,key)){
-//                 const L3 = L2[key];
-//                 console.log('\t\t\tL3 : ', L3);
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+for(let key in randomUser){
+  if(Object.prototype.hasOwnProperty.call(randomUser,key)){
+    const L1 = randomUser[key];
+    console.log('\tL1 : ', L1);
+    if(typeof L1 === 'object'){
+      for(let key in L1){
+        if(Object.prototype.hasOwnProperty.call(L1,key)){
+          const L2 = L1[key];
+          console.log('\t\tL2 : ', L2);
+          if(typeof L2 === 'object'){
+            for(let key in L2){
+              if(Object.prototype.hasOwnProperty.call(L2,key)){
+                const L3 = L2[key];
+                console.log('\t\t\tL3 : ', L3);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+function print(data){
+
+  if(typeof data === 'object'){
+    for(let keyValue of Object.entries(data)){
+      
+      let key = keyValue[0];
+      let value = keyValue[1];
+
+      if(typeof value === 'object' || isArray(value)){
+        print(value);
+      }else{
+        console.log(`key : ${key}, value : ${value}`);
+      }
+    }
+  }
+  
+  if(isArray(data)){
+    data.forEach((value,index)=>{
+      if(typeof value === 'object' || isArray(value)){
+        print(value);
+      }else{
+        console.log(`key : ${index}, value : ${value}`);
+      }
+    })
+  }
+}
 
 
 

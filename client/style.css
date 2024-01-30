@@ -10,7 +10,10 @@ h1 {
   position: absolute;
   left: 50%;
   top: 50%;
+  /* transform: translate(-50%, -50%) rotate(45deg) skew(10deg); */
   transform: translate(-50%, -50%);
+  /* rotation: 45deg */
+  /* translate: -50% */
 }
 
 
