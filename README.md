@@ -58,8 +58,8 @@
 
 
 ## Object
-- [ ] object (객체) [바로가기](https://github.com/simseonbeom/core-javascript/blob/01.core/client/chapter/core/12-1.object.js)
-- [ ] object (copy by reference) [바로가기](https://github.com/simseonbeom/core-javascript/blob/01.core/client/chapter/core/12-2.object.js)
+- [x] object (객체) [바로가기](https://github.com/simseonbeom/core-javascript/blob/01.core/client/chapter/core/12-1.object.js)
+- [x] object (copy by reference) [바로가기](https://github.com/simseonbeom/core-javascript/blob/01.core/client/chapter/core/12-2.object.js)
 - [ ] object (garbage collection) [바로가기](https://github.com/simseonbeom/core-javascript/blob/01.core/client/chapter/core/12-3.object.js)
 - [ ] object (method and this) [바로가기](https://github.com/simseonbeom/core-javascript/blob/01.core/client/chapter/core/12-4.object.js)
 
