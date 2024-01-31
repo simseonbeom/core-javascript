@@ -25,30 +25,30 @@ let resultZ = calculateTotal(9000, -2500, 5000, 11900);
 // spread syntax    ...arr
 
 //                //  rest parameter
-// let calcAllMoney = (...args)=>{
+let calcAllMoney = (...args)=>{
 
-//   // args 배열을 순환하여 모든 수의 합을 구하자!
+  // args 배열을 순환하여 모든 수의 합을 구하자!
 
-//   let total = 0;
-//   // for
-//   // for(let i = 0; i < args.length; i++){
-//   //   total += args[i];
-//   // }
+  let total = 0;
+  // for
+  // for(let i = 0; i < args.length; i++){
+  //   total += args[i];
+  // }
 
-//   // for..of
-//   // for(let value of args) total += value
+  // for..of
+  // for(let value of args) total += value
 
-//   // forEach
-//   // args.forEach(item => total += item)
+  // forEach
+  // args.forEach(item => total += item)
 
    
-//   // reduce
+  // reduce
 
-//   // args.reduce((acc,cur)=> acc + cur,0)
+  // args.reduce((acc,cur)=> acc + cur,0)
 
 
-//   return args.reduce((acc,cur)=> acc + cur,0)
-// };
+  return args.reduce((acc,cur)=> acc + cur,0)
+};
 
                //  rest parameter
 let calcAllMoney = (...args)=> args.reduce((acc,cur)=> acc + cur,0);
