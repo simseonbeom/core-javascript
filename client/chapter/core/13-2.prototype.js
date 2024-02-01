@@ -20,12 +20,14 @@ const _a = new Ani('호돌이')
 // constructor method는 최초 1회만 실행됨. (n회? x)
 
 class Animal {
+  #legs = 4;
+  #tail = true;
+
 
   constructor(name){
     this.name = name;
     this.stomach = [];
-    this.legs = 4;
-    this.tail = true;
+
   }
 
   get eat(){
@@ -44,8 +46,12 @@ class Animal {
 
 
 
+
 class Tiger extends Animal{
   
+  
+
+
   constructor(name){
     super(name)
     this.pattern = '호랑이무늬'
@@ -75,12 +81,130 @@ const 한라산호랑이 = new Tiger('한돌이');
 
 
 
+// Array.from();
+// Array.isArray();
+
+
+// const arr = new Array()
+
+// arr.forEach()
+// arr.reduce()
 
 
 
 
 
+// class Array{
 
+//   static from(){
+
+//   }
+
+//   static isArray(){
+
+//   }
+
+//   forEach(){
+
+//   }
+//   reduce(){
+
+//   }
+  
+// }
+
+
+// const a = new Array()
+
+// Array.from()
+
+
+
+// model (데이터)
+// view (랜더링)
+// control (이벤트)
+
+
+
+class Todo {
+
+  target = null;
+  registerButton = null;
+  list = null;
+  
+  constructor({input,button,renderPlace}){
+    
+    this.target = document.querySelector(input);
+    this.registerButton = document.querySelector(button);
+    this.list = document.querySelector(renderPlace)
+    this.todoListArray = [];
+    this.data;
+
+    this.registerEvent()
+
+    this.target.addEventListener('input',()=>{
+      this.data = this.currentInputTodoData;
+    })
+  }
+
+  get currentInputTodoData(){
+    return this.target.value;
+  }
+
+  set currentInputTodoData(value){
+    this.target.value = value;
+  }
+
+  get todoList(){
+    return this.todoListArray
+  }
+
+  set todoList(value){
+    this.todoList.push(value);
+  }
+
+  #createList(){
+    let template = `
+      <li>${this.data}</li>
+    `
+    return template;
+  }
+
+  render(){ 
+    this.list.insertAdjacentHTML('beforeend',this.#createList());
+    this.target.value = ''
+  }
+  
+  addTodoData(){
+    this.todoList = this.data;
+  }
+
+  registerEvent(){
+    this.registerButton.addEventListener('click',()=>{
+      this.addTodoData()
+      this.render()
+    });
+  }
+
+}
+
+
+
+
+
+const button = new Todo({
+  input: '#todo',
+  button: '.register',
+  renderPlace: '.todoList'
+})
+
+
+
+const button2 = new Todo({
+  input: '#todo2',
+  button: '.register2',
+  renderPlace: '.todoList2'
+})
 
 
 
