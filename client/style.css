@@ -20,10 +20,67 @@ h1 {
 
 
 .first{
-  /* background-color: orange; */
+  background-color: orange;
+  display: inline-block;
+  
 }
 
 
 span:nth-child(2){
 
+
 }
+
+
+
+
+h1{
+  
+
+
+
+  & .first{
+
+  }
+  
+  & .second{
+
+  }
+
+}
+
+/* 
+h1 .first{
+
+}
+
+h1 .second{
+
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

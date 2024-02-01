@@ -114,6 +114,7 @@ const 한라산호랑이 = new Tiger('한돌이');
 // }
 
 
+
 // const a = new Array()
 
 // Array.from()
@@ -205,6 +206,48 @@ const button2 = new Todo({
   button: '.register2',
   renderPlace: '.todoList2'
 })
+
+
+
+
+/* global React */
+
+
+
+class Button extends React.Component{
+  
+  render(){
+    
+    return <div> </div>
+  }
+}
+
+
+
+
+function Button(){
+  
+
+  return (
+    <div>
+      {arr}
+    </div>
+  )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
