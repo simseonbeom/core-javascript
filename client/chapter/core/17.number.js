@@ -79,9 +79,10 @@ console.log('pow : ',pow)
  * 2개의 인수를 받으며 가장 작은 수를 최솟값으로 인식합니다. 최솟값과 최댓값의 랜덤한 수를 반환합니다.
  * @param {number} min 
  * @param {number} max 
- * @returns number
+ * @returns {number}
  */
-let getRandomMinMax = (min,max)=>{
+
+const getRandomMinMax = (min,max)=>{
 
   if(min > max) throw new Error('최솟값은 최댓값보다 작아야 합니다.');
   

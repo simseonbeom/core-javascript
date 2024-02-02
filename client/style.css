@@ -34,30 +34,24 @@ span:nth-child(2){
 
 
 
-h1{
+.userCard{
+  border: 1px solid black;
+  padding: 2rem;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
   
-
-
-
-  & .first{
-
-  }
-  
-  & .second{
-
+  & .imageField{
+    width: 200px;
+    height: 200px;
+    background-color: gray;
   }
 
-}
-
-/* 
-h1 .first{
 
 }
 
-h1 .second{
 
-}
- */
 
 
 
