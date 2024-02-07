@@ -65,6 +65,14 @@ console.log( getComputedStyle(first)['backgroundColor'] ); // getter
 
 
 
+// removeClass('.first'); 모든 클래스 제거 
+
+
+
+
+
+
+
 
 
 
