@@ -1,4 +1,7 @@
-function clearContents(node){
+import { getNode } from "./getNode.js";
+
+
+export function clearContents(node){
   if(typeof node === 'string') node = getNode(node);
 
   if(node.tagName === 'INPUT' || node.tagName === 'TEXTAREA'){
@@ -7,3 +10,7 @@ function clearContents(node){
   }
   node.textContent = ''
 }
+
+
+// export default clearContents
+

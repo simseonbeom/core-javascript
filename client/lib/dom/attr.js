@@ -1,4 +1,4 @@
-
+import { getNode } from "./getNode.js";
 
 const attr = (function(){
 
