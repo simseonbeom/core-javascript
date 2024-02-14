@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko-KR">
   <head>
     <title>범쌤과 함께하는 자바스크립트 코어</title>
@@ -6,13 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="./style.css" />
-    <script src="./main.js"></script>
+    <script src="./main.js" type="module"></script>
   </head>
   <body>
-
-
-    <h1>hello javascript!</h1>
-
     
+    <div class="alert alert-error">제대로된 이름을 입력해주세요 !</div>
+    <div class="alert alert-success">클립보드에 복사 되었습니다 !</div>
+
+    <div class="container">
+      <h2>🤣 주접 생성기</h2>
+      <h3>주접 생성기를 통해 사랑을 전하세요</h3>
+
+      <form>
+        <label for="nameField"
+          >이름을 적어주세요 <span class="icon">👉</span></label
+        >
+        <input
+          type="text"
+          id="nameField"
+          placeholder="이름을 작성해주세요"
+          value=""
+        />
+
+        <input type="submit" value="주접 떨기" id="submit" />
+
+        <!-- 버튼 태그 레이어 -->
+        <div class="result">이름 작성 후 주접 떨기 버튼을 눌러주세요.</div>
+
+        <span class="notice"> 👆 클릭시 클립보드에 복사됩니다! 👆</span>
+      </form>
+    </div>
   </body>
 </html>
