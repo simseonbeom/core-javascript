@@ -63,7 +63,6 @@ input[type=submit]{
 
 .alert{
   padding: 2rem;
-  
   position: fixed;
   font-weight: bold;
   color: white;
