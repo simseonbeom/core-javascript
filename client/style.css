@@ -11,3 +11,13 @@ h1 {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+
+span{
+  position: relative;
+  top: 0;
+  left:0;
+  display: inline-block;
+  transition: all 1s;
+}
