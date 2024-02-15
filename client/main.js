@@ -1,7 +1,15 @@
 
 
 
-import { diceAnimation, getNode, getNodes, insertLast } from './lib/index.js';
+import { 
+  memo, 
+  getNode, 
+  getNodes, 
+  endScroll, 
+  insertLast,
+  diceAnimation,
+  clearContents,
+} from './lib/index.js';
 
 // [phase-1]
 // 1. 주사위 굴리기 버튼을 누르면 diceAnimation() 실행될 수 있도록
@@ -19,6 +27,16 @@ import { diceAnimation, getNode, getNodes, insertLast } from './lib/index.js';
 //    - 값 계산하기
 
 
+// [phase-3]
+// 1. 생성 함수와 랜더 함수 분리하기 (createItem, renderRecordItem)
+// 2. endScroll 함수 만들기 
+// 3. resetButton 이벤트 바인딩
+// 4. recordListWrapper show / hidden 처리
+// 5. tbody 자식 요소 제거  => node.textContent = ''  || clearContents()
+// 6. count, total값 초기화 
+// 7. recordButton, resetButton 비활성화 (disabled)
+
+
 // 미니 과제 => 만들어주는 함수, 초기화 버튼 클릭시 모든 데이터 날리기 
 
 const [rollingButton, recordButton, resetButton] = getNodes('.buttonGroup > button');
@@ -28,29 +46,29 @@ const recordListWrapper = getNode('.recordListWrapper');
 let count = 0;
 let total = 0;
 
+
+function createItem(value){
+
+  return `
+    <tr>
+      <td>${++count}</td>
+      <td>${value}</td>
+      <td>${total += value}</td>
+    </tr>
+  `
+}
+
+
+
 function renderRecordItem(){
 
-  const cube = getNode('#cube');
   // const diceValue = Number(cube.dataset.dice)
   // const diceValue = cube.dataset.dice * 1
   // const diceValue = cube.dataset.dice / 1
-  const diceValue = +cube.dataset.dice;
-
-  const template = `
-    <tr>
-      <td>${++count}</td>
-      <td>${diceValue}</td>
-      <td>${total += diceValue}</td>
-    </tr>
-  `
-
+  const diceValue = +memo('cube').dataset.dice;
   
-  insertLast('.recordList tbody',template);
-
-  
-  // 랜더링
-
-  
+  insertLast('.recordList tbody',createItem(diceValue));
+  endScroll(recordListWrapper)
 
 }
 
@@ -88,8 +106,24 @@ function handleRecord(){
 }
 
 
+function handleReset(){
+  recordListWrapper.hidden = true;
+
+  clearContents('tbody');
+  count = 0;
+  total = 0;
+
+  recordButton.disabled = true;
+  resetButton.disabled = true;
+  
+
+  // 1. tbody 안에 요소 제거  node.textContent = '' , ????
+  // 2. count, total 값 초기화  ?? =  0 
+}
+
 rollingButton.addEventListener('click',handleRollingDice);
 recordButton.addEventListener('click',handleRecord);
+resetButton.addEventListener('click',handleReset);
 
 
 
