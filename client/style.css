@@ -1,23 +1,119 @@
-/* body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
 
-h1 {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+body {
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-
-span{
+.user-card-list,
+.user-card-inner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  /* overflow-x: hidden; */
   position: relative;
-  top: 0;
-  left:0;
+}
+
+h2 {
+  color: #3a4436;
+}
+
+.loadingSpinner {
+  margin: 0;
+  /* width: ; */
+  /* height: 50%; */
+  text-align: center;
+  font-family: 'Apple SD Gothic Neo', sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  transform: translateX(-50%);
+  min-width: 400px;
+  z-index: 100;
+  background: white;
+}
+
+.loadingSpinner svg {
+  margin-bottom: 2rem !important;
+}
+
+.user-card {
+  background: #cb9a7f;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  color: #9f3c2d;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+  min-width: 400px;
+  position: relative;
+  /* transform: translateX(-100px); */
+  /* opacity: 0; */
+  /* transition: all 0.3s; */
+}
+
+.empty-user-card {
+  /* width: 100%; */
+  /* border: 1px solid black; */
+  /* background: #dbdbdb; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+.user-card:hover,
+.user-card:focus {
+  /* transform: translate(-5px,-5px); */
+  box-shadow: 7px 11px 17px 6px #0000002b;
+}
+
+.user-card > h3 {
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+.delete {
+  /* background:black; */
+  background: transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.544);
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s;
+  
+}
+
+.delete:hover {
+  color: white;
+  background: black;
+}
+
+.user-card a {
+  color: inherit;
   display: inline-block;
-  transition: all 1s;
+  border: 1px solid #9f3c2d;
+  border-radius: 1rem;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.user-resouce-info > div {
+  margin-bottom: 0.5rem;
+}
+
+.user-resouce-info > div:last-child {
+  margin-bottom: 0;
 }
