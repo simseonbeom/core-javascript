@@ -1,0 +1,29 @@
+{
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment"
+        ],
+        "settings": {
+          "fontStyle": "",
+          "foreground": "#baba61a5"
+        }
+      },
+      {
+        "scope": [
+          "entity.other.inherited-class",
+          "entity.other.attribute-name",
+          "variable.parameter",
+          "variable.language",
+          "storage.modifier",
+          "storage.type"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ],
+    "comments": ""
+  }
+}
